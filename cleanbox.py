@@ -1,3 +1,4 @@
+# Just started learning Python, so the code could probably be a lot better :)
 import glob, os, shutil
 
 # Change directory to the inbox folder
@@ -15,7 +16,7 @@ for file in glob.glob("*PUBG*"):
     shutil.move(file, ".\\Youtube")
 
 
-# Check every file in inbox2, if a file ends with ".py" move it to ".\\scripts" which was created earlier
+# Check every file in inbox1, if a file ends with ".py" move it to ".\\scripts" which was created earlier
 for file in os.listdir("c:\\files\\settings\Thomas\\Desktop\\inbox"):
     if file.endswith((".py")):
         # Check if there is a folder called scripts if not make one.
@@ -27,7 +28,7 @@ for file in os.listdir("c:\\files\\settings\Thomas\\Desktop\\inbox"):
         shutil.move(file, ".\\scripts")
 
 
-# Check every file in inbox2, if a file ends with ".jpg | .JPG | .jpeg | .png" move it to ".\\images" which was created earlier
+# Check every file in inbox1, if a file ends with ".jpg | .JPG | .jpeg | .png" move it to ".\\images" which was created earlier
 for file in os.listdir("c:\\files\\settings\Thomas\\Desktop\\inbox"):
     if file.endswith((".jpg", ".JPG", ".jpeg", ".png")):
         # Check if there is a folder called images if not make one.
@@ -39,7 +40,7 @@ for file in os.listdir("c:\\files\\settings\Thomas\\Desktop\\inbox"):
         shutil.move(file, ".\\images")
 
 
-# Check every file in inbox2, if a file ends with ".jpg | .JPG | .jpeg | .png" move it to ".\\images" which was created earlier
+# Check every file in inbox1, if a file ends with ".jpg | .JPG | .jpeg | .png" move it to ".\\images" which was created earlier
 for file in os.listdir("c:\\files\\settings\Thomas\\Desktop\\inbox"):
     if file.endswith((".exe", ".msi")):
         # Check if there is a folder called installers if not make one.
