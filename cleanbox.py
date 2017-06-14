@@ -15,7 +15,7 @@ for file in glob.glob("*PUBG*"):
 #Look for image files like .jpg.
 
 for file in os.listdir():                #Goes through each file in the directory
-    if file.endswith((".jpg", ".JPG", ".jpeg", ".png")): #Search for these files
+    if file.endswith((".jpg", ".JPG", ".jpeg", ".png", ".gif")): #Search for these files
         if not os.path.exists(".\\Images"):#If the files are found check for "Images" folder
             os.mkdir(".\\Images")        #If folder is not found make it.
         print(file + " --->> \"Images\"")
