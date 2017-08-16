@@ -1,22 +1,22 @@
 # I just started learning Python, so the code could probably be a lot better :)
 import os, shutil, glob
-os.chdir("c:\\files\\settings\\Thomas\\Desktop\\Inbox\\")#Chosen directory.
+os.chdir("c:\\files\\settings\\Thomas\\Desktop\\Inbox")#Chosen directory.
 
 #Functions for the sorting code to eliminate DRY code.
-def sortByWord(word, location):
-    for file in glob.glob(word):                     #Goes through each file in the directory looking for word.
+def sortByWord(word, location):    #I want it to look for "word" in the folder and move it to the "location".
+    for file in glob.glob(word):                     #Goes through each file in the directory looking for "word".
         if not os.path.exists(location):             #If "word" is found check for "location".
-            os.mkdir(location)                       #If "location" folder is not found, make it.
-        print(file + " --->> \""+location+"\"")      #Letting the user know which file is being moved to which folder.
-        shutil.move(file, location)                  #Move file to the folder.
+            os.mkdir(location)                       #If "location" is not there, make it.
+        print(file + " --->> \""+location+"\"")      #Let the user know what goes where.
+        shutil.move(file, location)                  #Move file to folder.
 
-def sortByFile(fileType, location):
-    for file in os.listdir():                        #Goes through each file in the directory.
-        if file.endswith(fileType):                  #Search for these files.
-            if not os.path.exists(location):         #If the files are found check for "Images" folder.
-                os.mkdir(location)                   #If folder is not found make it.
-            print(file + " --->> \""+location+"\"")  #Letting the user know what goes where.
-            shutil.move(file, location)              #Move file to the folder.
+def sortByFile(fileType, location):#Same as the other, this is just for filetype.
+    for file in os.listdir():                        #Check every file in the folder
+        if file.endswith(fileType):                  #and search for "fileType".
+            if not os.path.exists(location):         #If "fileType" is found check for "location".
+                os.mkdir(location)                   #If "location" is not there, make it.
+            print(file + " --->> \""+location+"\"")  #Let the user know what goes where.
+            shutil.move(file, location)              #Move file to folder.
 
 #Files to look for.
 imgFiles = (".jpg", ".JPG", ".jpeg", ".png", ".gif") #Images.
